@@ -1,0 +1,1 @@
+gp env -u VUE_APP_SERVER_URL
