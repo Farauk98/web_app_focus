@@ -1,17 +1,15 @@
-# Użyj oficjalnego obrazu Node.js
-FROM node:14
+FROM node:10 AS ui-build
+WORKDIR /usr/src/app
+COPY my-app/ ./my-app/
+RUN cd my-app && npm install && npm run build
 
-# Ustaw katalog roboczy
-WORKDIR /workspace
+FROM node:10 AS server-build
+WORKDIR /root/
+COPY --from=ui-build /usr/src/app/my-app/dist ./my-app/dist
+COPY api/package*.json ./api/
+RUN cd api && npm install
+COPY api/server.js ./api/
 
-# Skopiuj pliki z projektu do obrazu
-COPY . .
+EXPOSE 80
 
-# Zainstaluj zależności
-RUN npm install
-
-# Zainstaluj Vue CLI globalnie
-RUN npm install -g @vue/cli
-
-# Otwórz port 8080
-EXPOSE 8080
+CMD ["node", "./api/server.js"]
