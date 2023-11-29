@@ -7,6 +7,6 @@ RUN cd backend && npm install
 
 COPY backend/index.js ./backend/
 
-EXPOSE 80
+# EXPOSE 80
 
-CMD ["node", "./backend/index.js"]
+# CMD ["node", "./backend/index.js"]
