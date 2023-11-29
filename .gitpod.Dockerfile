@@ -1,13 +1,10 @@
-# FROM node:10 AS ui-build
-# WORKDIR /usr/src/app
-# COPY front/ ./front/
-# RUN cd front && npm install && npm run serve
+FROM node:10
 
-FROM node:10 AS server-build
-WORKDIR /root/
-# COPY --from=ui-build /usr/src/app/front/dist ./front/dist
+WORKDIR /usr/src/app
+
 COPY backend/package*.json ./backend/
 RUN cd backend && npm install
+
 COPY backend/index.js ./backend/
 
 EXPOSE 80
