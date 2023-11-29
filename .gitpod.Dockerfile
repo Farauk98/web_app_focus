@@ -1,7 +1,7 @@
 FROM node:10 AS ui-build
 WORKDIR /usr/src/app
 COPY front/ ./front/
-RUN cd front && npm install && npm run build
+RUN cd front && npm install && npm run serve
 
 FROM node:10 AS server-build
 WORKDIR /root/
