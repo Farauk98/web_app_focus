@@ -1,15 +1,15 @@
 FROM node:10 AS ui-build
 WORKDIR /usr/src/app
-COPY my-app/ ./my-app/
-RUN cd my-app && npm install && npm run build
+COPY front/ ./front/
+RUN cd front && npm install && npm run build
 
 FROM node:10 AS server-build
 WORKDIR /root/
-COPY --from=ui-build /usr/src/app/my-app/dist ./my-app/dist
-COPY api/package*.json ./api/
-RUN cd api && npm install
-COPY api/server.js ./api/
+COPY --from=ui-build /usr/src/app/front/dist ./front/dist
+COPY backend/package*.json ./backend/
+RUN cd backend && npm install
+COPY backend/index.js ./backend/
 
 EXPOSE 80
 
-CMD ["node", "./api/server.js"]
+CMD ["node", "./backend/index.js"]
