@@ -1,4 +1,4 @@
-FROM node:10
+FROM gitpod/workspace-rust
 
 WORKDIR /usr/src/app
 
