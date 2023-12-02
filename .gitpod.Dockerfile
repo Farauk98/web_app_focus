@@ -13,4 +13,4 @@ COPY package*.json ./
 RUN npm install
 
 # Set the working directory to /app
-WORKDIR /app
+WORKDIR /backend
