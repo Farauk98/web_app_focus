@@ -1,13 +1,7 @@
-# Konfiguracja Gitpod
 image:
   file: .gitpod.Dockerfile
-
-# Prekonfiguracja terminala
 tasks:
-  - name: Install Dependencies
-    command: npm install
-
-# Otwórz port 8080
+  - init: echo "Initializing workspace..."
 ports:
   - port: 8080
     onOpen: ignore

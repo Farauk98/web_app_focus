@@ -1,12 +1,7 @@
-FROM gitpod/workspace-rust
+# .gitpod.Dockerfile
 
-WORKDIR /usr/src/app
+# Use an official Node.js runtime as a parent image
+FROM node:14
 
-COPY backend/package*.json ./backend/
-RUN cd backend && npm install
-
-COPY backend/index.js ./backend/
-
-# EXPOSE 80
-
-# CMD ["node", "./backend/index.js"]
+# Set the working directory to /app
+WORKDIR /app
