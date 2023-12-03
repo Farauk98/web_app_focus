@@ -2,11 +2,14 @@ image:
   file: .gitpod.Dockerfile
 tasks:
   - init: |
-      echo "Initializing workspace..."
+      echo "Initializing backend..."
       cd backend
       npm install
       node index.js
-      cd ..
+
+  - command: |
+      echo "Initializing frontend..."
+      gp open /workspace/frontend
       cd front
       npm install --save socket.io-client
       export VUE_APP_SERVER_URL=$(gp url 3000)
