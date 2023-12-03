@@ -6,8 +6,8 @@ tasks:
       echo "Initializing backend..."
       cd backend
       npm install
-  - command: node index.js
-
+      node index.js
+  
   - command: |
       echo "Initializing frontend..."
       cd front
@@ -15,5 +15,5 @@ tasks:
       export VUE_APP_SERVER_URL=$(gp url 3000)
       npm install
       npm run serve
+      gp preview $(gp url 8080)
 
-  - command: gp preview $(gp url 8080)
