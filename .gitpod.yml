@@ -4,6 +4,10 @@ image:
 tasks:
   - init: |
       echo "Initializing backend..."
+      # Wprowadź tutaj odpowiednie polecenia do uzupełnienia .env
+      sed -i 's/login_api=/login_api=example/' .env
+      sed -i 's/password_api=/password_api=password/' .env
+      sed -i 's/phone=/phone=123456789/' .env
       cd backend
       npm install
       node index.js
