@@ -1,8 +1,7 @@
-require('dotenv').config();
+require('dotenv').config({path: 'workspace/web_app_focus/.env' });
 const login_api = process.env.login_api;
 const password_api = process.env.password_api;
 const phone_api = process.env.phone_api;
-console.log('login_api:', login_api);
 
 
 const { Server } = require('socket.io');
@@ -41,7 +40,7 @@ httpServer.use((req, res, next) => {
 });
 httpServer.post('/call', async (req, res) => {
     const number1 = req.body.number;
-    const number2 = 517253860 // tutaj dejemy swój numer
+    const number2 = phone_api // tutaj dejemy swój numer
      console.log('Dzwonie', number1, number2)
      bridge = await dialer.call(number1, number2);
  let oldStatus = null
