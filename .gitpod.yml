@@ -1,7 +1,15 @@
 image:
   file: .gitpod.Dockerfile
 tasks:
-  - init: echo "Initializing workspace..."
-ports:
-  - port: 8080
-    onOpen: ignore
+  - init: |
+      echo "Initializing workspace..."
+      cd backend
+      npm install
+      node index.js
+      cd ..
+      cd front
+      npm install --save socket.io-client
+      export VUE_APP_SERVER_URL=$(gp url 3000)
+      npm install
+      npm run serve
+
