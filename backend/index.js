@@ -12,8 +12,8 @@ const dialer = require('dialer').Dialer;
 
 const config = {
  url: 'https://uni-call.fcc-online.pl',
- login: 'focus23',
- password: '#b09pohnqfbi'
+ login: login,
+ password: password
 };
 
 dialer.configure(config);
