@@ -1,4 +1,5 @@
-require('dotenv').config({path: 'workspace/web_app_focus/.env' });
+require('dotenv').config({ path: '../../.env' });
+
 const login_api = process.env.login_api;
 const password_api = process.env.password_api;
 const phone_api = process.env.phone_api;
