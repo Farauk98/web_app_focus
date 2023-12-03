@@ -16,4 +16,6 @@ tasks:
       npm install
       npm run serve
       gp preview $(gp url 8080)
-
+ports:
+  - port: 3000
+  - port: 8080
