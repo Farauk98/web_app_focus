@@ -18,4 +18,6 @@ tasks:
       gp preview $(gp url 8080)
 ports:
   - port: 3000
+    visibility: public
   - port: 8080
+    visibility: public
