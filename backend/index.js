@@ -13,14 +13,13 @@ const dialer = require('dialer').Dialer;
 const config = {
  url: 'https://uni-call.fcc-online.pl',
  login: 'focus23',
- password: '#b09pohnqqfbi'
+ password: '#b09pohnqfbi'
 };
 
 dialer.configure(config);
 // Serwer nasłuchuje na porcie 3000
 const serverInstance = httpServer.listen(3000, function () {
  console.log('Example app listening on port 3000!')
- console.log(config)
 })
 
 const io = new Server(serverInstance)
@@ -42,7 +41,7 @@ httpServer.use((req, res, next) => {
 });
 httpServer.post('/call', async (req, res) => {
     const number1 = req.body.number;
-    const number2 = parseInt(phone) // tutaj dejemy swój numer
+    const number2 = '517253860' // tutaj dejemy swój numer
      console.log('Dzwonie', number1, number2)
      bridge = await dialer.call(number1, number2);
  let oldStatus = null
