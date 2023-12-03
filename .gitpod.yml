@@ -1,17 +1,18 @@
 image:
   file: .gitpod.Dockerfile
-
 tasks:
   - init: |
-      echo "Update backend..."
-      cd backend && \
-      npm install && \
-
+      echo "Run backend..."
+      cd backend
+      npm install
+      node index.js
   - command: | 
-      echo "Update frontend..." && \
-      cd front && \
-      npm install --save socket.io-client && \
-      npm install && \
+      echo "Run frontend..."
+      cd front
+      npm install --save socket.io-client
+      npm install
+      npm run serve
+  - command: gp preview 3000
 ports:
   - port: 3000
     visibility: public
