@@ -1,8 +1,8 @@
 require('dotenv').config({ path: '.env' });
 
-const login_api = process.env.login_api;
-const password_api = process.env.password_api;
-const phone_api = process.env.phone_api;
+const login = process.env.login_api;
+const password = process.env.password_api;
+const phone = process.env.phone_api;
 
 
 const { Server } = require('socket.io');
@@ -12,8 +12,8 @@ const dialer = require('dialer').Dialer;
 
 const config = {
  url: 'https://uni-call.fcc-online.pl',
- login: login_api,
- password: password_api
+ login: login,
+ password: password
 };
 
 dialer.configure(config);
@@ -41,7 +41,7 @@ httpServer.use((req, res, next) => {
 });
 httpServer.post('/call', async (req, res) => {
     const number1 = req.body.number;
-    const number2 = phone_api // tutaj dejemy swój numer
+    const number2 = phone // tutaj dejemy swój numer
      console.log('Dzwonie', number1, number2)
      bridge = await dialer.call(number1, number2);
  let oldStatus = null
