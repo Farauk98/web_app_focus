@@ -4,6 +4,8 @@
 FROM node:14
 
 RUN npm install -g vue
+RUN npm install dotenv
+
 
 # Set the working directory to /app
 WORKDIR /backend
