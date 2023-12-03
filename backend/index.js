@@ -20,6 +20,7 @@ dialer.configure(config);
 // Serwer nasłuchuje na porcie 3000
 const serverInstance = httpServer.listen(3000, function () {
  console.log('Example app listening on port 3000!')
+ console.log(config)
 })
 
 const io = new Server(serverInstance)
