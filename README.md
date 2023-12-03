@@ -1,1 +1,1 @@
-gp env -u VUE_APP_SERVER_URL
+https://gitpod.io/new/#https://github.com/Farauk98/web_app_focus
