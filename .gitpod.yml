@@ -3,29 +3,15 @@ image:
 
 tasks:
   - init: |
-      echo "Initializing backend..."
-      touch .env
-      # Wprowadź poniżej odpowiednie polecenia do uzupełnienia .env
-      read -p "Enter login_api: " login && \
-      read -p "Enter password_api: " password && \
-      read -p "Enter phone_api: " phone && \
-
-      # Ustawienie zmiennych w pliku .env
-      echo "login_api=$login" >> .env && \
-      echo "password_api=$password" >> .env && \
-      echo "phone_api=$phone" >> .env && \
-  
+      echo "Update backend..."
       cd backend && \
       npm install && \
-      node index.js
+
   - command: | 
-      echo "Initializing frontend..." && \
+      echo "Update frontend..." && \
       cd front && \
       npm install --save socket.io-client && \
-      export VUE_APP_SERVER_URL=$(gp url 3000) && \
       npm install && \
-      npm run serve && \
-      gp preview $(gp url 8080) 
 ports:
   - port: 3000
     visibility: public
