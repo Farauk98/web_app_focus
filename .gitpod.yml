@@ -4,7 +4,7 @@ image:
 tasks:
   - init: |
       echo "Initializing backend..."
-
+      touch .env
       # Wprowadź poniżej odpowiednie polecenia do uzupełnienia .env
       read -p "Enter login_api: " login && \
       read -p "Enter password_api: " password && \
@@ -17,9 +17,9 @@ tasks:
   
       cd backend && \
       npm install && \
-      node index.js && \
-  
-      gnome-terminal -- echo "Initializing frontend..." && \
+      node index.js
+  - command: | 
+      echo "Initializing frontend..." && \
       cd front && \
       npm install --save socket.io-client && \
       export VUE_APP_SERVER_URL=$(gp url 3000) && \
