@@ -1,4 +1,4 @@
-require('dotenv').config({ path: '../../.env' });
+require('dotenv').config({ path: '.env' });
 
 const login_api = process.env.login_api;
 const password_api = process.env.password_api;
