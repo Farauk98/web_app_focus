@@ -2,7 +2,7 @@ require('dotenv').config();
 const login_api = process.env.login_api;
 const password_api = process.env.password_api;
 const phone_api = process.env.phone_api;
-
+console.log('login_api:', login_api);
 
 
 const { Server } = require('socket.io');
