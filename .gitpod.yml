@@ -17,10 +17,9 @@ tasks:
   
       cd backend && \
       npm install && \
-      node index.js
+      node index.js && \
   
-  - command: |
-      echo "Initializing frontend..." && \
+      gnome-terminal -- echo "Initializing frontend..." && \
       cd front && \
       npm install --save socket.io-client && \
       export VUE_APP_SERVER_URL=$(gp url 3000) && \
