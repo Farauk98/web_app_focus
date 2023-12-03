@@ -9,10 +9,11 @@ tasks:
   - command: | 
       echo "Run frontend..."
       cd front
+      export VUE_APP_SERVER_URL=$(gp url 3000)
       npm install --save socket.io-client
       npm install
       npm run serve
-  - command: gp preview 3000
+  - command: gp preview gp url 8080
 ports:
   - port: 3000
     visibility: public
