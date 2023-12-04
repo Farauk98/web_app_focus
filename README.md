@@ -1,5 +1,9 @@
 # Node.js with Vue.js - Run on Gitpod
 
+## Introduction
+
+This project has been delicately expanded from course sessions organized by the [University of Lodz](https://www.uni.lodz.pl) in collaboration with the company [Focus Telecom](https://focustelecom.pl/). The course provided the foundational knowledge for developing applications using **Vue.js** and **Node.js**. This endeavor marks my inaugural experience with both technologies, showcasing the practical application of **JavaScript** in web development. My prior experience with JavaScript was relatively limited.
+
 ## Requirements
 
 Before getting started with the project, make sure you have the following accounts:
