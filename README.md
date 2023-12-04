@@ -15,17 +15,25 @@ https://gitpod.io/new/#https://github.com/Farauk98/web_app_focus
 
 2. If prompted, authorize Gitpod to access your GitHub account.
 
-3. Recommended option:
+3. Recommended options:
 
-* **Select Repository** github.com/Farauk98/web_app_focus
+* **Select Repository:** github.com/Farauk98/web_app_focus
 
-* **Select Editor** VS Code 1.84.2 (browser)
+* **Select Editor:** VS Code 1.84.2 (browser)
 
-* Class: Standard, Cores: Up to 4 cores, RAM: 8 GB, Storage: 30 GB
+* **Class:** Standard, Cores: Up to 4 cores, RAM: 8 GB, Storage: 30 GB
 
-Wait for Gitpod to initialize the workspace. This may take a few moments.
+4. Wait for Gitpod to initialize the workspace. This may take a few moments.
 
-Once the workspace is ready, you'll find the project files loaded in the Gitpod IDE.
+5. After initialization, you should see three terminals:
+
+* The first terminal is running the backend.
+
+* The second terminal is running the frontend.
+
+* The third terminal has launched a simple IDE browser.
+
+Now, with all components loaded, you have a fully functional development environment. The backend and frontend are up and running, and a lightweight IDE browser is available in the third terminal for your convenience. You can start testing my project .
 
 ## Docker Configuration
 
@@ -37,6 +45,10 @@ This project includes a '.gitpod.Dockerfile' for configuring the Docker environm
 
 This configuration sets up the Docker environment, initializes the backend, runs the frontend, and opens a preview for the frontend. The preview link will be provided by Gitpod and may change dynamically (e.g. 8080-farauk98-webappfocus *-yu1qfzvp4g0.ws-eu106* .gitpod.io).
 Ports **3000** and **8080** are configured as **public**, eliminating the need to manually make them public.
+
+# Environment Configuration
+
+For security reasons, the project uses environment variables stored in a .env file. It's important to note that the .env file should includ in the .gitignore and should never be committed to the repository. However, to facilitate a quick setup for automatic application launch, a .env file has been provided. **This is not a recommended practice for projects**; it's a convenient solution for fast application initiation.
 
 ## Contribution
 
