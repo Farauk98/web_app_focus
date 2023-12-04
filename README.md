@@ -50,7 +50,7 @@ This project includes a '.gitpod.Dockerfile' for configuring the Docker environm
 This configuration sets up the Docker environment, initializes the backend, runs the frontend, and opens a preview for the frontend. The preview link will be provided by Gitpod and may change dynamically (e.g. 8080-farauk98-webappfocus *-yu1qfzvp4g0.ws-eu106* .gitpod.io).
 Ports **3000** and **8080** are configured as **public**, eliminating the need to manually make them public.
 
-# Environment Configuration
+## Environment Configuration
 
 For security reasons, the project uses environment variables stored in a .env file. It's important to note that the .env file should includ in the .gitignore and should never be committed to the repository. However, to facilitate a quick setup for automatic application launch, a .env file has been provided. **This is not a recommended practice for projects**; it's a convenient solution for fast application initiation.
 
