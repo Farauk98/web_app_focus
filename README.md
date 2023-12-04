@@ -11,6 +11,38 @@ Before getting started with the project, make sure you have the following accoun
 - [Gitpod](https://gitpod.io/) 
 - [Github](https://github.com/)
 
+## Installed Modules/Applications
+
+### Mandatory Modules
+
+1. **dotenv**
+   - Description: A zero-dependency module that loads environment variables from a .env file.
+   - Installation: `npm install dotenv`
+
+2. **vue**
+   - Description: A progressive JavaScript framework for building user interfaces.
+   - Installation: `npm install vue`
+
+3. **socket.io-client**
+   - Description: A client library that enables real-time, bidirectional, and event-based communication.
+   - Installation: `npm install socket.io-client`
+
+### Optional Modules for Testing
+
+1. **mocha**
+   - Description: A feature-rich JavaScript test framework running on Node.js and in the browser, making asynchronous testing simple and fun.
+   - Installation: `npm install --save-dev mocha`
+
+2. **chai**
+   - Description: A BDD/TDD assertion library for Node.js and the browser.
+   - Installation: `npm install --save-dev chai`
+
+3. **supertest**
+   - Description: A library for testing HTTP assertions, often used with Mocha or Jest.
+   - Installation: `npm install --save-dev supertest`
+
+**Note:** Ensure that optional testing modules are installed with the `--save-dev` flag to add them to the development dependencies.
+
 ## Running on Gitpod
 
 1. Click the "Open in Gitpod" button above or visit this link to create a new workspace in Gitpod.
