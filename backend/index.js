@@ -64,3 +64,5 @@ let interval = setInterval(async () => {
 res.json({ id: '123', status: bridge.STATUSES.NEW
 });
 })
+
+module.exports = httpServer;
