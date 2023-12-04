@@ -54,6 +54,24 @@ Ports **3000** and **8080** are configured as **public**, eliminating the need t
 
 For security reasons, the project uses environment variables stored in a .env file. It's important to note that the .env file should includ in the .gitignore and should never be committed to the repository. However, to facilitate a quick setup for automatic application launch, a .env file has been provided. **This is not a recommended practice for projects**; it's a convenient solution for fast application initiation.
 
+## Unit Test
+
+### index.test.js
+
+```bash
+$ npm install --save-dev mocha chai supertest
+$ npx mocha index.test.js
+```
+
+```bash
+ Example app listening on port 3000!
+
+  Unit Tests for index.js
+    ✔ should respond with success JSON on GET /call/:number1/:number2
+
+  1 passing (27ms)
+```
+
 ## Contribution
 
 Any suggestions, improvements, or bug reports are welcome. Please submit pull requests on GitHub.
